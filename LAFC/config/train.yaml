@@ -1,0 +1,74 @@
+### General settings
+name: LAFC_train
+use_tb_logger: True
+outputdir: /myData/ret/experiments/
+datadir: /myData/
+record_iter: 16
+
+### Calling definition
+model: lafc
+datasetName_train: train_dataset_edge
+network: network
+
+### Datasets
+datasets:
+  train:
+    name: youtubevos
+    type: video
+    mode: train
+    dataInfo_config: ./config/data_info.yaml
+    use_shuffle: True
+    n_workers: 0
+    batch_size: 4
+
+  val:
+    name: youtubevos
+    type: video
+    mode: val
+    use_shuffle: False
+    n_workers: 1
+    batch_size: 1
+    val_config: ./config/valid_config.yaml
+
+### train settings
+train:
+  lr: 0.0001
+  lr_decay: 0.1
+  manual_seed: 10
+  BETA1: 0.9
+  BETA2: 0.999
+  MAX_ITERS: 280000
+  UPDATE_INTERVAL: 120000
+  WARMUP: ~
+  val_freq: 1  # epoch为~M~U~M, set to 1 is for debug
+
+### logger
+logger:
+  PRINT_FREQ: 16
+  SAVE_CHECKPOINT_FREQ: 1   # 100 is for debug consideration
+
+### Data related parameters
+num_flows: 3
+flow_interval: 3
+sample: seq
+use_edges: 0
+
+### Model related parameters
+PASSMASK: 1
+use_bias: 1
+init_weights: 1
+cnum: 48
+resBlocks: 1
+edge_residuals: 4
+conv_type: vanilla
+in_channel: 3
+use_residual: 1
+gc: 0
+rescale: 1
+
+### Loss weights
+L1M: 1
+sm: 1
+sm2: 1
+edge_loss: 1
+ternary: 0.01

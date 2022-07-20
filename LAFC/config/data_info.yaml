@@ -1,0 +1,16 @@
+# dataset general info
+flow_path: davis_test_flows
+frame_path: JPEGImages/480p
+name2len: config/davis_name2len.pkl
+
+flow:
+  flow_height: 256
+  flow_width: 256
+  augments: False
+  colors: RGB
+  ext: .jpg
+
+edge:
+  sigma: 1
+  low_threshold: 0.1
+  high_threshold: 0.2

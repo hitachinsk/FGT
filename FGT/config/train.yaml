@@ -1,0 +1,93 @@
+### General settings
+name: FGT_train
+use_tb_logger: true
+outputdir: /myData/ret/experiments
+datadir: /myData
+record_iter: 16
+
+### Calling definition
+model: model
+datasetName_train: train_dataset
+network: network
+
+### datasets
+datasets:
+  train:
+    name: youtubevos
+    type: video
+    mode: train
+    dataInfo_config: ./config/data_info.yaml
+    use_shuffle: True
+    n_workers: 0
+    batch_size: 1
+
+  val:
+    name: youtubevos
+    type: video
+    mode: val
+    use_shuffle: False
+    n_workers: 1
+    batch_size: 1
+    val_config: ./config/valid_config.yaml
+
+### train settings
+train:
+  lr: 0.0001
+  lr_decay: 0.1
+  manual_seed: 10
+  BETA1: 0.9
+  BETA2: 0.999
+  MAX_ITERS: 500000
+  UPDATE_INTERVAL: 300000 # 400000 is also OK
+  WARMUP: ~
+  val_freq: 1  # epoch为~M~U~M, set to 1 is for debug
+  TEMPORAL_GAN: ~  # without temporal GAN
+
+### logger
+logger:
+  PRINT_FREQ: 16
+  SAVE_CHECKPOINT_FREQ: 4000   # 100 is for debug consideration
+
+### Data related parameters
+flow2rgb: 1
+flow_direction: for
+num_frames: 5
+sample: random
+max_val: 0.01
+
+### Model related parameters
+res_h: 240
+res_w: 432
+in_channel: 4
+cnum: 64
+flow_inChannel: 2
+flow_cnum: 64
+dist_cnum: 32
+frame_hidden: 512
+flow_hidden: 256
+PASSMASK: 1
+num_blocks: 8
+kernel_size_w: 7
+kernel_size_h: 7
+stride_h: 3
+stride_w: 3
+num_head: 4
+conv_type: vanilla
+norm: None
+use_bias: 1
+ape: 1
+pos_mode: single
+mlp_ratio: 40
+drop: 0
+init_weights: 1
+tw: 2
+sw: 8
+gd: 4
+
+### Loss weights
+L1M: 1
+L1V: 1
+adv: 0.01
+
+### inference parameters
+ref_length: 10

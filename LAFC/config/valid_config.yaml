@@ -1,0 +1,7 @@
+flow_height: 256
+flow_width: 432
+data_root: davis_valid_flows
+mask_root: rectMask_96
+frame_root: JPEGImages/480p
+batch_size: 1
+name2len: config/davis_name2len_val.pkl
