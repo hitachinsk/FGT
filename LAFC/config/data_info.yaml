@@ -1,7 +1,7 @@
 # dataset general info
-flow_path: davis_test_flows
-frame_path: JPEGImages/480p
-name2len: config/davis_name2len.pkl
+flow_path: youtubevos_flows
+frame_path: youtubevos_frames
+name2len: config/youtubevos_name2len.pkl
 
 flow:
   flow_height: 256
