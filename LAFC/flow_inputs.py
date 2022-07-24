@@ -45,5 +45,6 @@ def args_parser():
     parser.add_argument('--rescale', type=int, default=1,
                         help='Whether to rescale the results to the original flow range for calculating losses?')
     parser.add_argument('--ternary', type=float, default=0.01)
+    parser.add_argument('--use_valid', action='store_true')
     args = parser.parse_args()
     return args

@@ -77,6 +77,7 @@ def args_parser():
     parser.add_argument('--gd', type=int, default=4, help='Global downsample rate for spatial transformer')
 
     parser.add_argument('--ref_length', type=int, default=10, help='The sample interval during inference')
+    parser.add_argument('--use_valid', action='store_true')
 
     args = parser.parse_args()
     return args

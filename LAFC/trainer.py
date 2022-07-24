@@ -161,7 +161,7 @@ class Trainer(metaclass=ABCMeta):
             self._trainEpoch(epoch)
             if self.currentStep > self.totalIterations:
                 break
-            if (epoch + 1) % self.opt['train']['val_freq'] == 0:
+            if self.opt['use_valid'] and (epoch + 1) % self.opt['train']['val_freq'] == 0:
                 self._validate(epoch)
             self.scheduler.step(epoch)
 
