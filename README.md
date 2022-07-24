@@ -10,7 +10,7 @@ This repository contains the implementation of the following paper:
 
 
 ## Overview
-<img src="materials/pipeline.jpg" height="500px"/> 
+<img src="materials/pipeline.jpg" height="300px"/> 
 
 We propose a flow-guided transformer, which innovatively leverage the motion discrepancy exposed by optical flows to instruct the attention retrieval in transformer for high fidelity video inpainting. More specially, we design a novel flow completion network to complete the corrupted flows by exploiting the relevant flow features in a local temporal window. With the completed flows, we propagate the content across video frames, and adopt the flow-guided transformer to synthesize the rest corrupted regions. We decouple transformers along temporal and spatial dimension, so that we can easily integrate the locally relevant completed flows to instruct spatial attention only. Furthermore, we design a flow-reweight module to precisely control the impact of completed flows on each spatial transformer. For the sake of efficiency, we introduce window partition strategy to both spatial and temporal transformers. Especially in spatial transformer, we design a dual perspective spatial MHSA, which integrates the global tokens to the window-based attention. Extensive experiments demonstrate the effectiveness of the proposed method qualitatively and quantitatively.
 
@@ -49,8 +49,11 @@ python video_inpainting.py --path data/frames/schoolgirls \
 --path_mask data/masks/schoolgirls \
 --outroot data/results/schoolgirls
 ```
-If everythings works, you will find a `result.mp4` file in `data/results/schoolgirls`, and it should be like.
-(video)
+If everythings works, you will find a `result.mp4` file in `data/results/schoolgirls`. And the video should be like:
+
+<video id="video" controls="" preload="none" poster="poster">
+      <source id="mp4" src="materials/schoolgirls.mp4" type="video/mp4">
+</videos>
 
 ## Training
 Our codes follows a two-stage training process. In the first stage, we train the flow completion network (LAFC), and then we train the flow-guided transformer model (FGT).
