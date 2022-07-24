@@ -362,20 +362,29 @@ def video_completion(args):
     imgH, imgW = args.imgH, args.imgW
     nFrame = len(filename_list)
 
+    if imgH < 350:
+        flowH, flowW = imgH * 2, imgW * 2
+    else:
+        flowH, flowW = imgH, imgW
+
     # Load video.
-    video = []
+    video, video_flow = [], []
     for filename in sorted(filename_list):
         frame = torch.from_numpy(np.array(Image.open(filename)).astype(np.uint8)).permute(2, 0, 1).float().unsqueeze(0)
         frame = F2.upsample(frame, size=(imgH, imgW), mode='bilinear', align_corners=False)
+        frame_flow = F2.upsample(frame, size=(flowH, flowW), mode='bilinear', align_corners=False)
         video.append(frame)
+        video_flow.append(frame_flow)
 
     video = torch.cat(video, dim=0)  # [n, c, h, w]
+    video_flow = torch.cat(video_flow, dim=0)
     gts = video.clone()
     video = video.to('cuda')
+    video_flow = video_flow.to(device)
 
     # Calcutes the corrupted flow.
-    forward_flows = calculate_flow(args, RAFT_model, video, 'forward')  # [B, C, 2, N]
-    backward_flows = calculate_flow(args, RAFT_model, video, 'backward')
+    forward_flows = calculate_flow(args, RAFT_model, video_flow, 'forward')  # [B, C, 2, N]
+    backward_flows = calculate_flow(args, RAFT_model, video_flow, 'backward')
 
     # Makes sure video is in BGR (opencv) format.
     video = video.permute(2, 3, 1, 0).cpu().numpy()[:, :, ::-1, :] / 255.  # np array -> [h, w, c, N] (0~1)
@@ -554,6 +563,8 @@ def video_completion(args):
     if args.vis_frame:
         save_results(args.outroot, comp_frames)
     create_dir(args.outroot)
+    for i in range(len(comp_frames)):
+        comp_frames[i] = comp_frames[i].astype(np.uint8)
     imageio.mimwrite(os.path.join(args.outroot, 'result.mp4'), comp_frames, fps=30, quality=8)
     print(f'Done, please check your result in {args.outroot} ')
 
