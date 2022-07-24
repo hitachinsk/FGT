@@ -1,6 +1,8 @@
 **/__pycache__
 *.pyc
 FGT/flowCheckPoint/
-FGT/checkpoint
-LAFC/checkpoint
+FGT/checkpoint/
+FGT/config
+LAFC/checkpoint/
+LAFC/config
 data/
