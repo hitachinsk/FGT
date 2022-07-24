@@ -4,9 +4,9 @@ This repository contains the implementation of the following paper:
 > Kaidong Zhang, Jingjing Fu and Dong Liu<br>
 > European Conference on Computer Vision (**ECCV**), 2022<br>
 
-<img src="materials/demo_o/bmx-bumps_o.gif" width="160"/> <img src="materials/demo_o/schoolgirls_o.gif" width="160"/>   <img src="materials/demo_o/shooting_o.gif" width="160"/>    <img src="materials/demo_o/tractor-sand_o.gif" width="160"/> 
+<img src="materials/demo_o/bmx-bumps_o.gif" width="160"/> <img src="materials/demo_o/schoolgirls_o.gif" width="160"/>   <img src="materials/demo_o/shooting_o.gif" width="160"/>    <img src="materials/demo_o/tractor-sand_o.gif" width="160"/>
 
-<img src="materials/demo_p/bmx-bumps_p.gif" width="160"/> <img src="materials/demo_p/schoolgirls_p.gif" width="160"/>   <img src="materials/demo_p/shooting_p.gif" width="160"/>    <img src="materials/demo_p/tractor-sand_p.gif" width="160"/>
+<img src="materials/demo_p/schoolgirls_p.gif" width="160"/> <img src="materials/demo_p/schoolgirls_p.gif" width="160"/>   <img src="materials/demo_p/shooting_p.gif" width="160"/>    <img src="materials/demo_p/tractor-sand_p.gif" width="160"/>
 
 
 ## Overview
