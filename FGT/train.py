@@ -9,8 +9,6 @@ import glob
 from inputs import args_parser
 
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
-
 def main_worker(rank, opt):
     if 'local_rank' not in opt:
         opt['local_rank'] = opt['global_rank'] = rank
