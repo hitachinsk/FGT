@@ -7,7 +7,6 @@ from importlib import import_module
 
 from flow_inputs import args_parser
 
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 def main_worker(rank, opt):
     if 'local_rank' not in opt:
