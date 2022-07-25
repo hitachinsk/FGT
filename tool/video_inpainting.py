@@ -346,6 +346,14 @@ def save_results(outdir, comp_frames):
 
 def video_completion(args):
     device = torch.device('cuda:{}'.format(args.gpu))
+    
+    if args.opt is not None:
+        with open(args.opt, 'r') as f:
+            opts = yaml.load(f)
+
+    for k in opts.keys():
+        if k in args:
+            setattr(args, k, opts[k])
 
     # Flow model.
     RAFT_model = initialize_RAFT(args, device)
@@ -578,6 +586,7 @@ def main(args):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+    parser.add_argument('--opt', default='configs/object_removal.yaml', help='Please select your config file for inference')
     # video completion
     parser.add_argument('--mode', default='object_removal', help="modes: object_removal / video_extrapolation")
     parser.add_argument('--path', default='/myData/davis_resized/walking', help="dataset for evaluation")
