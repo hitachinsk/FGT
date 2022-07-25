@@ -1,0 +1,8 @@
+mode: object_removal
+consistencyThres: 5
+alpha: 0.1
+lafc_ckpts: ../LAFC/checkpoint
+fgt_ckpts: ../FGT/checkpoint
+flow_mask_dilates: 12
+frame_dilates: 4
+gpu: 0
