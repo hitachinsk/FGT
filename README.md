@@ -1,4 +1,5 @@
 # [ECCV 2022] Flow-Guided Transformer for Video Inpainting
+[![OSCS Status](https://www.oscs1024.com/platform/badge//hitachinsk/FGT.git.svg?size=small)](https://www.murphysec.com/dr/Mv2KZkf8cimnLKgoC4)
 This repository contains the implementation of the following paper:
 > **Flow-Guided Transformer for Video Inpainting**<br>
 > Kaidong Zhang, Jingjing Fu and Dong Liu<br>
