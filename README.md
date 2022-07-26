@@ -84,6 +84,7 @@ This work is licensed under MIT license. See the [LICENSE](LICENSE) for details.
 ## Citation
 If our work inspires your research or some part of the codes are useful for your work, please cite our paper.
 
+Our other video inpainting paper:
 ```bibtex
 @InProceedings{Zhang_2022_CVPR,
     author    = {Zhang, Kaidong and Fu, Jingjing and Liu, Dong},
