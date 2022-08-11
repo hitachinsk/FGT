@@ -104,9 +104,6 @@ def main(args):
     RAFT_model = initialize_RAFT(args)
 
     videos = os.listdir(args.path)
-    # videos = ['drift-chicane', 'tuk-tuk', 'kite-surf', 'lady-running', 'bmx-trees', 'drift-turn', 'paragliding', 'bus', 'drift-straight', 'mbike-trick', 'dance-twirl', 'boat']
-    # videos = ['bear', 'bmx-bumps', 'bmx-trees', 'bmx-trees', 'car-shadow', 'cows', 'dance-jump', 'elephant', 'flamingo', 'goat', 'hike', 'horsejump-low', 'lucia', 'rhino', 'schoolgirls', 'soccerball', 'stunt', 'swing', 'tennis', 'tractor-sand', 'train']
-    videos = ['dog']
     videoLen = len(videos)
     try:
         exceptList = os.listdir(args.expdir)
