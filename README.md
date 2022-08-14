@@ -2,6 +2,8 @@
 [![OSCS Status](https://www.oscs1024.com/platform/badge//hitachinsk/FGT.git.svg?size=small)](https://www.murphysec.com/dr/Mv2KZkf8cimnLKgoC4)
 [![LICENSE](https://img.shields.io/github/license/hitachinsk/FGT)](https://github.com/hitachinsk/FGT/blob/main/LICENSE)
 
+[paper] / [demo](https://youtu.be/BC32n-NncPs)
+
 This repository contains the implementation of the following paper:
 > **Flow-Guided Transformer for Video Inpainting**<br>
 > Kaidong Zhang, Jingjing Fu and Dong Liu<br>
