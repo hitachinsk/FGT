@@ -22,7 +22,6 @@ We propose a flow-guided transformer, which innovatively leverage the motion dis
 ## Todo list
 - [x] Test the video frame extrapolation results.
 - [x] Update the real-world results.
-- [x] Update the website and make the demo videos
 
 ## Prerequisites
 
@@ -50,9 +49,9 @@ pip install imageio-ffmpeg
 4. Run the object removal demo
 ```bash
 cd tool
-python video_inpainting.py --path data/frames/schoolgirls \
---path_mask data/masks/schoolgirls \
---outroot data/results/schoolgirls
+python video_inpainting.py --path ../data/frames/schoolgirls \
+--path_mask ../data/masks/schoolgirls \
+--outroot ../data/results/schoolgirls
 ```
 If everythings works, you will find a `result.mp4` file in `data/results/schoolgirls`. And the video should be like:
 
