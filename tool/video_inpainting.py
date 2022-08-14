@@ -195,7 +195,7 @@ def calculate_flow(args, model, video, mode):
     if mode not in ['forward', 'backward']:
         raise NotImplementedError
 
-    nFrame, _, imgH, imgW = video.shape
+    imgH, imgW = args.imgH, args.imgW
     Flow = np.empty(((imgH, imgW, 2, 0)), dtype=np.float32)
 
     if args.vis_flows:
@@ -218,6 +218,12 @@ def calculate_flow(args, model, video, mode):
 
             _, flow = model(image1, image2, iters=20, test_mode=True)
             flow = flow[0].permute(1, 2, 0).cpu().numpy()
+            # resize optical flows
+            h, w = flow.shape[:2]
+            flow = cv2.resize(flow, (imgW, imgH), cv2.INTER_LINEAR)
+            flow[:, :, 0] *= (float(imgW) / float(w))
+            flow[:, :, 1] *= (float(imgH) / float(h))
+            
             Flow = np.concatenate((Flow, flow[..., None]), axis=-1)
 
             if args.vis_flows:
