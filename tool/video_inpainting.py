@@ -220,9 +220,10 @@ def calculate_flow(args, model, video, mode):
             flow = flow[0].permute(1, 2, 0).cpu().numpy()
             # resize optical flows
             h, w = flow.shape[:2]
-            flow = cv2.resize(flow, (imgW, imgH), cv2.INTER_LINEAR)
-            flow[:, :, 0] *= (float(imgW) / float(w))
-            flow[:, :, 1] *= (float(imgH) / float(h))
+            if h != imgH or w != imgW:
+                flow = cv2.resize(flow, (imgW, imgH), cv2.INTER_LINEAR)
+                flow[:, :, 0] *= (float(imgW) / float(w))
+                flow[:, :, 1] *= (float(imgH) / float(h))
             
             Flow = np.concatenate((Flow, flow[..., None]), axis=-1)
 
