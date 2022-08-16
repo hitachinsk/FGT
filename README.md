@@ -2,7 +2,7 @@
 [![OSCS Status](https://www.oscs1024.com/platform/badge//hitachinsk/FGT.git.svg?size=small)](https://www.murphysec.com/dr/Mv2KZkf8cimnLKgoC4)
 [![LICENSE](https://img.shields.io/github/license/hitachinsk/FGT)](https://github.com/hitachinsk/FGT/blob/main/LICENSE)
 
-[paper](https://arxiv.org/abs/2208.06768) / [demo](https://youtu.be/BC32n-NncPs)
+### [[paper](https://arxiv.org/abs/2208.06768)] / [[demo](https://youtu.be/BC32n-NncPs)]
 
 This repository contains the implementation of the following paper:
 > **Flow-Guided Transformer for Video Inpainting**<br>
