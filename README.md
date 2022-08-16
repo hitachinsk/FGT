@@ -115,7 +115,7 @@ If you have any questions, please contact us via
 - richu@mail.ustc.edu.cn
 
 ## Acknowledgement
-Some parts of this repo are based on [FGVC](https://github.com/vt-vl-lab/FGVC) and [Fuseformer](https://github.com/ruiliu-ai/FuseFormer). 
+Some parts of this repo are based on [FGVC](https://github.com/vt-vl-lab/FGVC) and [Fuseformer](https://github.com/ruiliu-ai/FuseFormer).  And we adopt [RAFT](https://github.com/princeton-vl/RAFT) for flow estimation. 
 
 
 
