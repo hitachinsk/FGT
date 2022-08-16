@@ -351,7 +351,7 @@ def save_results(outdir, comp_frames):
         cv2.imwrite(out_path, comp_frames[i][:, :, ::-1])
 
 
-def video_completion(args):
+def video_inpainting(args):
     device = torch.device('cuda:{}'.format(args.gpu))
     
     if args.opt is not None:
@@ -588,7 +588,7 @@ def main(args):
     assert args.mode in ('object_removal', 'video_extrapolation'), (
                                                                        "Accepted modes: 'object_removal', 'video_extrapolation', but input is %s"
                                                                    ) % args.mode
-    video_completion(args)
+    video_inpainting(args)
 
 
 if __name__ == '__main__':
