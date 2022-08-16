@@ -2,7 +2,7 @@
 [![OSCS Status](https://www.oscs1024.com/platform/badge//hitachinsk/FGT.git.svg?size=small)](https://www.murphysec.com/dr/Mv2KZkf8cimnLKgoC4)
 [![LICENSE](https://img.shields.io/github/license/hitachinsk/FGT)](https://github.com/hitachinsk/FGT/blob/main/LICENSE)
 
-[paper] / [demo](https://youtu.be/BC32n-NncPs)
+[paper](https://arxiv.org/abs/2208.06768) / [demo](https://youtu.be/BC32n-NncPs)
 
 This repository contains the implementation of the following paper:
 > **Flow-Guided Transformer for Video Inpainting**<br>
@@ -86,7 +86,17 @@ python train.py
 This work is licensed under MIT license. See the [LICENSE](LICENSE) for details.
 
 ## Citation
-If our work inspires your research or some part of the codes are useful for your work, please cite our paper.
+If our work inspires your research or some part of the codes are useful for your work, please cite our paper:
+```bibtex
+@misc{zhang2022flowguided,
+      title={Flow-Guided Transformer for Video Inpainting}, 
+      author={Kaidong Zhang and Jingjing Fu and Dong Liu},
+      year={2022},
+      eprint={2208.06768},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 
 Our other video inpainting paper:
 ```bibtex
