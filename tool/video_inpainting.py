@@ -28,7 +28,6 @@ import yaml
 from importlib import import_module
 
 import utils.region_fill as rf
-from utils.Poisson_blend import Poisson_blend
 from utils.Poisson_blend_img import Poisson_blend_img
 from get_flowNN_gradient import get_flowNN_gradient
 from torchvision.transforms import ToTensor
