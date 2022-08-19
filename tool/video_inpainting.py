@@ -164,7 +164,7 @@ def initialize_LAFC(args, device):
     checkpoint, config_file = glob.glob(os.path.join(args.lafc_ckpts, '*.tar'))[0], \
                               glob.glob(os.path.join(args.lafc_ckpts, '*.yaml'))[0]
     with open(config_file, 'r') as f:
-        configs = yaml.load(f)
+        configs = yaml.full_load(f)
     model = configs['model']
     pkg = import_module('LAFC.models.{}'.format(model))
     model = pkg.Model(configs)
@@ -179,7 +179,7 @@ def initialize_FGT(args, device):
     checkpoint, config_file = glob.glob(os.path.join(args.fgt_ckpts, '*.tar'))[0], \
                               glob.glob(os.path.join(args.fgt_ckpts, '*.yaml'))[0]
     with open(config_file, 'r') as f:
-        configs = yaml.load(f)
+        configs = yaml.full_load(f)
     model = configs['model']
     net = import_module('FGT.models.{}'.format(model))
     model = net.Model(configs).to(device)
@@ -355,7 +355,7 @@ def video_inpainting(args):
     
     if args.opt is not None:
         with open(args.opt, 'r') as f:
-            opts = yaml.load(f)
+            opts = yaml.full_load(f)
 
     for k in opts.keys():
         if k in args:
