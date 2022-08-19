@@ -37,7 +37,7 @@ git clone https://github.com/hitachinsk/FGT.git
 ```
 Then, please run the following commands:
 ```
-conda create -n FGT
+conda create -n FGT python=3.6.8
 conda activate FGT
 pip install -r requirements.txt
 pip install imageio-ffmpeg
