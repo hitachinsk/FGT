@@ -57,6 +57,7 @@ python video_inpainting.py --path ../data/frames/schoolgirls \
 If everythings works, you will find a `result.mp4` file in `data/results/schoolgirls`. And the video should be like:
 
 <img src="materials/demo_p/schoolgirls_p.gif" width="320"/>
+We also prepare other video sequences for you to test. All you need to do is to change the input and output paths, have fun!
 
 ## Training
 Our codes follows a two-stage training process. In the first stage, we train the flow completion network (LAFC), and then we train the flow-guided transformer model (FGT).
