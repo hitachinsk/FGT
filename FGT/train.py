@@ -45,7 +45,7 @@ def main(args_obj):
     checkpoint, config = glob.glob(os.path.join(opt['flow_checkPoint'], '*.tar'))[0], \
                          glob.glob(os.path.join(opt['flow_checkPoint'], '*.yaml'))[0]
     with open(config, 'r') as f:
-        configs = yaml.load(f)
+        configs = yaml.full_load(f)
     opt['flow_config'] = configs
     opt['flow_checkPoint'] = checkpoint
 
