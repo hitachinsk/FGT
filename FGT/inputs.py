@@ -19,7 +19,7 @@ def args_parser():
     parser.add_argument('--dis_state', type=str, default='', help='Checkpoint of the discriminator')
     parser.add_argument('--opt_state', type=str, default='', help='Checkpoint of the options')
     parser.add_argument('--record_iter', type=int, default=16, help='How many iters to print an item of log')
-    parser.add_argument('--flow_checkPoint', type=str, default='flowCheckPoint/flow_model_1290',
+    parser.add_argument('--flow_checkPoint', type=str, default='flowCheckPoint/lafc_single',
                         help='The path for flow model filling')
     parser.add_argument('--dataMode', type=str, default='resize', choices=['resize', 'crop'])
 
