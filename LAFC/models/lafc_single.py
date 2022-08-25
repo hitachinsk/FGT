@@ -73,13 +73,6 @@ class P3DNet(BaseNetwork):
             self.init_weights()
 
     def forward(self, flows, masks, edges=None):
-        """
-        Args:
-            flows: The diffused optical flows (initial inpainted optical flows for flow warping), woth shape [b, 2, t, h, w]
-            masks: tensor, with shape [b, 1, t, h, w], the middle of t is the target flow tensor
-            edges: tensor, with shape [b, 1, t, h, w]
-        Returns: middle of the target flow
-        """
         if self.passmask:
             inputs = torch.cat((flows, masks), dim=1)
         else:
