@@ -40,7 +40,7 @@ train:
   MAX_ITERS: 500000
   UPDATE_INTERVAL: 300000 # 400000 is also OK
   WARMUP: ~
-  val_freq: 1  # epoch为~M~U~M, set to 1 is for debug
+  val_freq: 1  # Set to 1 is for debug, you can enlarge it to 50 in regular training
   TEMPORAL_GAN: ~  # without temporal GAN
 
 ### logger
