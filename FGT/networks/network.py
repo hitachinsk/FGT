@@ -14,7 +14,7 @@ import cv2
 import cvbase
 import imageio
 from skimage.feature import canny
-from models.flow_net import Model
+from models.lafc_single import Model
 from data.util.flow_utils import region_fill as rf
 
 
