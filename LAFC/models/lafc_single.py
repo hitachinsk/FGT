@@ -11,8 +11,7 @@ class Model(nn.Module):
         super(Model, self).__init__()
         self.net = P3DNet(config['num_flows'], config['cnum'], config['in_channel'], config['PASSMASK'],
                           config['use_residual'],
-                          config['resBlocks'], config['use_bias'], config['conv_type'], config['multi_out'],
-                          config['init_weights'])
+                          config['resBlocks'], config['use_bias'], config['conv_type'], config['init_weights'])
 
     def forward(self, flows, masks, edges=None):
         ret = self.net(flows, masks, edges)
@@ -57,9 +56,6 @@ class P3DNet(BaseNetwork):
             self.ConvBlock2d(num_feats * 2, num_feats * 2, kernel_size=3, stride=1, padding=1, bias=use_bias,
                              norm=None)
         )
-        if self.multi_out:
-            self.out4 = self.ConvBlock2d(num_feats * 4, 2, kernel_size=1, stride=1, padding=0, bias=use_bias, norm=None)
-            self.out2 = self.ConvBlock2d(num_feats * 2, 2, kernel_size=1, stride=1, padding=0, bias=use_bias, norm=None)
         self.decoder = nn.Sequential(
             self.DeconvBlock2d(num_feats * 4, num_feats, kernel_size=3, stride=1, padding=1, bias=use_bias,
                                norm=None),
@@ -86,17 +82,11 @@ class P3DNet(BaseNetwork):
         else:
             e4_res = e4
         c_e4_filled = self.middle(e4_res)
-        if self.multi_out:
-            out4 = self.out4(c_e4_filled)
         c_e4 = torch.cat((c_e4_filled, e4), dim=1)
         c_e2Post = self.decoder2(c_e4)
-        if self.multi_out:
-            out2 = self.out2(c_e2Post)
         c_e2 = torch.cat((c_e2Post, e2), dim=1)
         output = self.decoder(c_e2)
         edge = self.edgeDetector(output)
-        if self.multi_out:
-            return output, out4, out2, edge
         return output, edge
 
 
