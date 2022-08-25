@@ -20,10 +20,9 @@ class Model(nn.Module):
 
 class P3DNet(BaseNetwork):
     def __init__(self, num_flows, num_feats, in_channels, passmask, use_residual, res_blocks,
-                 use_bias, conv_type, multi_out, init_weights):
+                 use_bias, conv_type, init_weights):
         super().__init__(conv_type)
         self.passmask = passmask
-        self.multi_out = multi_out
         self.encoder2 = nn.Sequential(
             nn.ReplicationPad2d(2),
             self.ConvBlock2d(in_channels, num_feats, kernel_size=5, stride=1, padding=0, bias=use_bias, norm=None),
