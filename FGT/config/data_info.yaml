@@ -9,8 +9,3 @@ flow:
   augments: False
   colors: RGB
   ext: .jpg
-
-edge:
-  sigma: 1
-  low_threshold: 0.1
-  high_threshold: 0.2
