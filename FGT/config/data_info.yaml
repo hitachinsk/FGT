@@ -1,7 +1,7 @@
 # dataset general info
 frame_path: youtubevos_frames
 flow_path: youtubevos_flows
-name2len: configs/youtubevos_name2len.pkl
+name2len: config/youtubevos_name2len.pkl
 
 flow:
   flow_height: 240
