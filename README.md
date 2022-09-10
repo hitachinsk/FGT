@@ -13,7 +13,7 @@ This repository contains the implementation of the following paper:
 
 <img src="materials/demo_p/bbp.gif" width="160"/> <img src="materials/demo_p/schoolgirls_p.gif" width="160"/>   <img src="materials/demo_p/shooting_p.gif" width="160"/>    <img src="materials/demo_p/tractor-sand_p.gif" width="160"/>
 
- It is too tedious to run the codes on the local server? Feel free to play with our provided online demos!
+ Is it too tedious to run the codes on the local server? Feel free to play with our provided online demos!
  - Colab demo: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19KOSVsfVs2Yy38r-6ptZae_8frJShLOS#scrollTo=51evfFkkQpm0)
 
 
@@ -48,6 +48,9 @@ pip install imageio-ffmpeg
 ```
 
 ## Quick start
+You can try our online demos: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19KOSVsfVs2Yy38r-6ptZae_8frJShLOS#scrollTo=51evfFkkQpm0)
+
+If you need to run the codes on the local servers, here are the instructions.
 1. Download the [pre-trained models](https://drive.google.com/file/d/1CLfeZjBWDHcbcr0J2EHBr6Qbc03cKcJg/view?usp=sharing), and the [data](https://drive.google.com/file/d/1aDhC78P0bD9GrKl9mjikyRnRomjeS22h/view?usp=sharing).
 2. Put the downloaded zip files to the root directory of this project
 3. Run `bash prepare_data.sh` to unzip the files
