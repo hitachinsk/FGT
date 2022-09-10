@@ -51,10 +51,11 @@ pip install imageio-ffmpeg
 You can try our online demos: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19KOSVsfVs2Yy38r-6ptZae_8frJShLOS#scrollTo=51evfFkkQpm0)
 
 If you need to run the codes on the local servers, here are the instructions.
-1. Download the [[pre-trained models](https://drive.google.com/file/d/1CLfeZjBWDHcbcr0J2EHBr6Qbc03cKcJg/view?usp=sharing)], and the [[data](https://drive.google.com/file/d/1aDhC78P0bD9GrKl9mjikyRnRomjeS22h/view?usp=sharing)]. You can also get access to our models at [[🤗Huggingface](https://huggingface.co/hitachinsk/FGT)]
-2. Put the downloaded zip files to the root directory of this project
-3. Run `bash prepare_data.sh` to unzip the files
-4. Run the object removal demo
+1. Download the [[pre-trained models](https://drive.google.com/file/d/1CLfeZjBWDHcbcr0J2EHBr6Qbc03cKcJg/view?usp=sharing)], and the [[data](https://drive.google.com/file/d/1aDhC78P0bD9GrKl9mjikyRnRomjeS22h/view?usp=sharing)]. 
+    - You can also get access to our models at [[🤗Huggingface](https://huggingface.co/hitachinsk/FGT)]
+3. Put the downloaded zip files to the root directory of this project
+4. Run `bash prepare_data.sh` to unzip the files
+5. Run the object removal demo
 ```bash
 cd tool
 python video_inpainting.py --path ../data/frames/schoolgirls \
