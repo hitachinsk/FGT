@@ -13,6 +13,10 @@ This repository contains the implementation of the following paper:
 
 <img src="materials/demo_p/bbp.gif" width="160"/> <img src="materials/demo_p/schoolgirls_p.gif" width="160"/>   <img src="materials/demo_p/shooting_p.gif" width="160"/>    <img src="materials/demo_p/tractor-sand_p.gif" width="160"/>
 
+ It is too tedious to run the codes on the local server? Feel free to play with our provided online demos!
+ - Colab demo: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19KOSVsfVs2Yy38r-6ptZae_8frJShLOS#scrollTo=51evfFkkQpm0)
+
+
 
 ## Overview
 <img src="materials/pipeline.jpg" height="260px"/> 
