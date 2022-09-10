@@ -2,7 +2,7 @@
 [![OSCS Status](https://www.oscs1024.com/platform/badge//hitachinsk/FGT.git.svg?size=small)](https://www.murphysec.com/dr/Mv2KZkf8cimnLKgoC4)
 [![LICENSE](https://img.shields.io/github/license/hitachinsk/FGT)](https://github.com/hitachinsk/FGT/blob/main/LICENSE)
 
-### [[paper](https://arxiv.org/abs/2208.06768)] / [[demo](https://youtu.be/BC32n-NncPs)] / [[Project page](https://hitachinsk.github.io/publication/2022-10-01-Flow-Guided-Transformer-for-Video-Inpainting)]
+### [[Paper](https://arxiv.org/abs/2208.06768)] / [[Demo](https://youtu.be/BC32n-NncPs)] / [[Project page](https://hitachinsk.github.io/publication/2022-10-01-Flow-Guided-Transformer-for-Video-Inpainting)]
 
 This repository contains the implementation of the following paper:
 > **Flow-Guided Transformer for Video Inpainting**<br>
@@ -51,7 +51,7 @@ pip install imageio-ffmpeg
 You can try our online demos: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19KOSVsfVs2Yy38r-6ptZae_8frJShLOS#scrollTo=51evfFkkQpm0)
 
 If you need to run the codes on the local servers, here are the instructions.
-1. Download the [pre-trained models](https://drive.google.com/file/d/1CLfeZjBWDHcbcr0J2EHBr6Qbc03cKcJg/view?usp=sharing), and the [data](https://drive.google.com/file/d/1aDhC78P0bD9GrKl9mjikyRnRomjeS22h/view?usp=sharing).
+1. Download the [[pre-trained models](https://drive.google.com/file/d/1CLfeZjBWDHcbcr0J2EHBr6Qbc03cKcJg/view?usp=sharing)], and the [[data](https://drive.google.com/file/d/1aDhC78P0bD9GrKl9mjikyRnRomjeS22h/view?usp=sharing)]. You can also get access to our models at [[🤗Huggingface](https://huggingface.co/hitachinsk/FGT)]
 2. Put the downloaded zip files to the root directory of this project
 3. Run `bash prepare_data.sh` to unzip the files
 4. Run the object removal demo
