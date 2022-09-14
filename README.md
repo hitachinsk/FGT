@@ -6,7 +6,7 @@
 
 This repository contains the implementation of the following paper:
 > **Flow-Guided Transformer for Video Inpainting**<br>
-> [Kaidong Zhang](https://hitachinsk.github.io/), [Jingjing Fu](https://www.microsoft.com/en-us/research/people/jifu/) and [Dong Liu](http://staff.ustc.edu.cn/~dongeliu/)<br>
+> [Kaidong Zhang](https://hitachinsk.github.io/), [Jingjing Fu](https://www.microsoft.com/en-us/research/people/jifu/) and [Dong Liu](https://faculty.ustc.edu.cn/dongeliu/)<br>
 > European Conference on Computer Vision (**ECCV**), 2022<br>
 
 <img src="materials/demo_o/bmx-bumps_o.gif" width="160"/> <img src="materials/demo_o/schoolgirls_o.gif" width="160"/>   <img src="materials/demo_o/shooting_o.gif" width="160"/>    <img src="materials/demo_o/tractor-sand_o.gif" width="160"/>
