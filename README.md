@@ -83,7 +83,6 @@ python video_inpainting.py --opt configs/watermark_removal.yaml \
 ### Video extrapolation (outpainting)
 <details>
 <summary>Click to open</summary>
- <b>Warning</b>: This function has not been uploaded yet.
  <pre><code>
 cd tool
 python video_inpainting.py --opt configs/video_extrapolation.yaml \
