@@ -1,0 +1,8 @@
+mode: video_extrapolation
+consistencyThres: 5
+alpha: 0.1
+lafc_ckpts: ../LAFC/checkpoint
+fgt_ckpts: ../FGT/checkpoint
+H_scale: 1.2
+W_scale: 1.2
+gpu: 0
