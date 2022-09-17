@@ -383,12 +383,28 @@ def video_inpainting(args):
 
     # Load video.
     video, video_flow = [], []
-    for filename in sorted(filename_list):
-        frame = torch.from_numpy(np.array(Image.open(filename)).astype(np.uint8)).permute(2, 0, 1).float().unsqueeze(0)
-        frame = F2.upsample(frame, size=(imgH, imgW), mode='bilinear', align_corners=False)
-        frame_flow = F2.upsample(frame, size=(flowH, flowW), mode='bilinear', align_corners=False)
-        video.append(frame)
-        video_flow.append(frame_flow)
+    if args.mode == 'watermark_removal':
+        maskname_list = glob.glob(os.path.join(args.path_mask, '*.png')) + glob.glob(
+            os.path.join(args.path_mask, '*.jpg'))
+        assert len(filename_list) == len(maskname_list)
+        for filename, maskname in zip(sorted(filename_list), sorted(maskname_list)):
+            frame = torch.from_numpy(np.array(Image.open(filename)).astype(np.uint8)).permute(2, 0,
+                                                                                              1).float().unsqueeze(0)
+            mask = torch.from_numpy(np.array(Image.open(maskname)).astype(np.uint8)).permute(2, 0,
+                                                                                             1).float().unsqueeze(0)
+            mask[mask > 0] = 1
+            frame = frame * (1 - mask)
+            frame = F2.upsample(frame, size=(imgH, imgW), mode='bilinear', align_corners=False)
+            frame_flow = F2.upsample(frame, size=(flowH, flowW), mode='bilinear', align_corners=False)
+            video.append(frame)
+            video_flow.append(frame_flow)
+    else:
+        for filename in sorted(filename_list):
+            frame = torch.from_numpy(np.array(Image.open(filename)).astype(np.uint8)).permute(2, 0, 1).float().unsqueeze(0)
+            frame = F2.upsample(frame, size=(imgH, imgW), mode='bilinear', align_corners=False)
+            frame_flow = F2.upsample(frame, size=(flowH, flowW), mode='bilinear', align_corners=False)
+            video.append(frame)
+            video_flow.append(frame_flow)
 
     video = torch.cat(video, dim=0)  # [n, c, h, w]
     video_flow = torch.cat(video_flow, dim=0)
@@ -594,7 +610,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--opt', default='configs/object_removal.yaml', help='Please select your config file for inference')
     # video completion
-    parser.add_argument('--mode', default='object_removal', help="modes: object_removal / video_extrapolation")
+    parser.add_argument('--mode', default='object_removal', choices=['object_removal', 'watermark_removal', 'video_extrapolation'], help="modes: object_removal / video_extrapolation")
     parser.add_argument('--path', default='/myData/davis_resized/walking', help="dataset for evaluation")
     parser.add_argument('--path_mask', default='/myData/dilateAnnotations_4/walking', help="mask for object removal")
     parser.add_argument('--outroot', default='quick_start/walking3', help="output directory")
