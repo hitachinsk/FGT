@@ -246,6 +246,8 @@ def extrapolation(args, video_ori, corrFlowF_ori, corrFlowB_ori):
     # Defines new FOV.
     imgH_extr = int(args.H_scale * imgH)
     imgW_extr = int(args.W_scale * imgW)
+    imgH_extr = imgH_extr - imgH_extr % 4
+    imgW_extr = imgW_extr - imgW_extr % 4
     H_start = int((imgH_extr - imgH) / 2)
     W_start = int((imgW_extr - imgW) / 2)
 
