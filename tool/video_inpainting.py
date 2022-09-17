@@ -409,7 +409,7 @@ def video_inpainting(args):
     video = torch.cat(video, dim=0)  # [n, c, h, w]
     video_flow = torch.cat(video_flow, dim=0)
     gts = video.clone()
-    video = video.to('cuda')
+    video = video.to(device)
     video_flow = video_flow.to(device)
 
     # Calcutes the corrupted flow.
