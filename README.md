@@ -67,6 +67,33 @@ If everythings works, you will find a `result.mp4` file in `data/results/schoolg
 <img src="materials/demo_p/schoolgirls_p.gif" width="320"/>
 We also prepare other video sequences for you to test. All you need to do is to change the input and output paths, have fun!
 
+### Watermark removal
+<details>
+<summary>Click to open</summary>
+ <pre><code>
+cd tool
+python video_inpainting.py --opt configs/watermark_removal.yaml \
+--mode watermark_removal \
+ --path "Path to the video frames" \
+--path_mask "Path to the video masks" \
+--outroot "Path to save the results"
+</code></pre>
+</details>
+
+### Video extrapolation (outpainting)
+<details>
+<summary>Click to open</summary>
+ <b>Warning</b>: This function has not been uploaded yet.
+ <pre><code>
+cd tool
+python video_inpainting.py --opt configs/video_extrapolation.yaml \
+--mode video_extrapolation \
+ --path "Path to the video frames" \
+--path_mask "Path to the video masks" \
+--outroot "Path to save the results"
+</code></pre>
+</details>
+
 ## Training
 Our codes follows a two-stage training process. In the first stage, we train the flow completion network (LAFC), and then we train the flow-guided transformer model (FGT).
 We assume you are at the root directory of this repo.
