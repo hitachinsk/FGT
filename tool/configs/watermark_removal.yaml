@@ -1,0 +1,8 @@
+mode: watermark_removal
+consistencyThres: 1
+alpha: 0.1
+lafc_ckpts: ../LAFC/checkpoint
+fgt_ckpts: ../FGT/checkpoint
+flow_mask_dilates: 9
+frame_dilates: 0
+gpu: 0
