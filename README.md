@@ -87,7 +87,6 @@ cd tool
 python video_inpainting.py --opt configs/video_extrapolation.yaml \
 --mode video_extrapolation \
  --path "Path to the video frames" \
---path_mask "Path to the video masks" \
 --outroot "Path to save the results"
 </code></pre>
 </details>
