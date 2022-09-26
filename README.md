@@ -108,7 +108,7 @@ python train.py
 
 Third, train the FGT model. Since LAFC takes multiple flows as input, the IO cost is huge for the training of FGT model. Therefore, we adopt the 2D version of LAFC (replace all the P3D convolutions to 2D convolutions) to guide the training of FGT. We provide a pretrained model in `LAFC/flowCheckpoint`, if you want to train this model by yourself, follow the command below.
 ```bash
-python train.py --opt train_single.yaml
+python train.py --opt config/train_single.yaml
 ```
 As for the training of FGT model, run the command below.
 ```bash
