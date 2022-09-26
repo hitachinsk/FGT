@@ -90,9 +90,15 @@ class Network(Trainer):
             diffused_flows = diffused_flows.to(self.opt['device'])
             target_edge = target_edge.to(self.opt['device'])
 
-            b, c, t, h, w = masks.shape
-            target_flow = flows[:, :, t // 2]
-            target_mask = masks[:, :, t // 2]
+            if self.opt['model'] == 'lafc':
+                b, c, t, h, w = masks.shape
+                target_flow = flows[:, :, t // 2]
+                target_mask = masks[:, :, t // 2]
+            elif self.opt['model'] == 'lafc_single':
+                target_flow = flows
+                target_mask = masks
+            else:
+                raise NotImplementedError(f'Training model: {self.opt['model']} is not implemented!')
 
             filled_flow = self.model(diffused_flows, masks)
 
