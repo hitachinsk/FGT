@@ -89,16 +89,15 @@ class Network(Trainer):
             masks = masks.to(self.opt['device'])
             diffused_flows = diffused_flows.to(self.opt['device'])
             target_edge = target_edge.to(self.opt['device'])
-
-            if self.opt['model'] == 'lafc':
+            
+            if len(masks.shape) == 5:
                 b, c, t, h, w = masks.shape
                 target_flow = flows[:, :, t // 2]
                 target_mask = masks[:, :, t // 2]
-            elif self.opt['model'] == 'lafc_single':
+            else:
+                assert len(masks.shape) == 4 and len(flows.shape) == 4
                 target_flow = flows
                 target_mask = masks
-            else:
-                raise NotImplementedError(f'Training model: {self.opt['model']} is not implemented!')
 
             filled_flow = self.model(diffused_flows, masks)
 
@@ -312,10 +311,15 @@ class Network(Trainer):
                 target_flow = target_flow.to(self.opt['device'])
                 target_edge = target_edge.to(self.opt['device'])
                 target_mask = masks[:, :, sequenceLen // 2]
+                if diffused_flows.shape[2] == 1 and len(diffused_flows.shape) == 5:
+                    assert masks.shape[2] == 1
+                    diffused_flows = diffused_flows.squeeze(2)
+                    masks = masks.squeeze(2)
                 with torch.no_grad():
                     filled_flow = self.model(diffused_flows, masks, None)
                 filled_flow, filled_edge = filled_flow
-                target_diffused_flow = diffused_flows[:, :, sequenceLen // 2]
+                if len(diffused_flows.shape) == 5:
+                    target_diffused_flow = diffused_flows[:, :, sequenceLen // 2]
                 combined_flow = target_flow * (1 - target_mask) + filled_flow * target_mask
 
                 # calculate metrics
