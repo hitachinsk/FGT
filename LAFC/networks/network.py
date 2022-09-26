@@ -320,6 +320,8 @@ class Network(Trainer):
                 filled_flow, filled_edge = filled_flow
                 if len(diffused_flows.shape) == 5:
                     target_diffused_flow = diffused_flows[:, :, sequenceLen // 2]
+                else:
+                    target_diffused_flow = diffused_flows
                 combined_flow = target_flow * (1 - target_mask) + filled_flow * target_mask
 
                 # calculate metrics
