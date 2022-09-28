@@ -17,7 +17,7 @@ This repository contains the implementation of the following paper:
  - Colab demo: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19KOSVsfVs2Yy38r-6ptZae_8frJShLOS?usp=sharing)
 
 ## News
-**I will give a talk in the "AI new trend" lecture, which aims for Chinese audience. The date of the lecture is 14th Oct, 2022. In this lecture, I will provide detailed analysis and future directions about FGT and transformer in video inpainting and even low level vision tasks. If you are interested in FGT, it will be a valuable choice to attend this lecture. For detailed information, please access the [[Project page](https://hitachinsk.github.io/publication/2022-10-01-Flow-Guided-Transformer-for-Video-Inpainting)]**.
+**I will give a talk in the "AI new trend" lecture, which aims for Chinese audience. The date of the lecture is 14th Oct, 2022. In this lecture, I will provide detailed analysis and future directions about FGT and transformer in video inpainting and even low level vision tasks. If you are interested in FGT, it will be a valuable choice to attend this lecture. For detailed information, please access the [poster](materials/FGT.jpg).
 
 ## Overview
 <img src="materials/pipeline.jpg" height="260px"/> 
