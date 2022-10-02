@@ -2,7 +2,7 @@
 [![OSCS Status](https://www.oscs1024.com/platform/badge//hitachinsk/FGT.git.svg?size=small)](https://www.murphysec.com/dr/Mv2KZkf8cimnLKgoC4)
 [![LICENSE](https://img.shields.io/github/license/hitachinsk/FGT)](https://github.com/hitachinsk/FGT/blob/main/LICENSE)
 
-### [[Paper](https://arxiv.org/abs/2208.06768)] / [[Demo](https://youtu.be/BC32n-NncPs)] / [[Project page](https://hitachinsk.github.io/publication/2022-10-01-Flow-Guided-Transformer-for-Video-Inpainting)] / [[Talk](materials/391724383.jpg)] / [Poster] / [Slides]
+### [[Paper](https://arxiv.org/abs/2208.06768)] / [[Demo](https://youtu.be/BC32n-NncPs)] / [[Project page](https://hitachinsk.github.io/publication/2022-10-01-Flow-Guided-Transformer-for-Video-Inpainting)] / [[Talk](https://drive.google.com/file/d/15RHeDNAHvHOiiRp9Vr3mP4jfjlmyRAhV/view?usp=sharing)] / [Poster] / [Slides]
 
 This repository contains the implementation of the following paper:
 > **Flow-Guided Transformer for Video Inpainting**<br>
@@ -17,7 +17,7 @@ This repository contains the implementation of the following paper:
  - Colab demo: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19KOSVsfVs2Yy38r-6ptZae_8frJShLOS?usp=sharing)
 
 ## News
-**I will give a talk in the "AI new trend" lecture, which aims for Chinese audience. The date of the lecture is 14th Oct, 2022. In this lecture, I will provide detailed analysis and future directions about FGT and transformer in video inpainting and even low level vision tasks. If you are interested in FGT, it will be a valuable choice to attend this lecture. For detailed information, please access the [poster](materials/391724383.jpg).**
+**I will give a talk in the "AI new trend" lecture, which aims for Chinese audience. The date of the lecture is 14th Oct, 2022. In this lecture, I will provide detailed analysis and future directions about FGT and transformer in video inpainting and even low level vision tasks. If you are interested in FGT, it will be a valuable choice to attend this lecture. For detailed information, please access the [poster](https://drive.google.com/file/d/15RHeDNAHvHOiiRp9Vr3mP4jfjlmyRAhV/view?usp=sharing).**
 
 ## Overview
 <img src="materials/pipeline.jpg" height="260px"/> 
