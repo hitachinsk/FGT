@@ -602,8 +602,8 @@ def video_inpainting(args):
 
 
 def main(args):
-    assert args.mode in ('object_removal', 'video_extrapolation'), (
-                                                                       "Accepted modes: 'object_removal', 'video_extrapolation', but input is %s"
+    assert args.mode in ('object_removal', 'video_extrapolation', 'watermark_removal'), (
+                                                                       "Accepted modes: 'object_removal', 'video_extrapolation', and 'watermark_removal', but input is %s"
                                                                    ) % args.mode
     video_inpainting(args)
 
