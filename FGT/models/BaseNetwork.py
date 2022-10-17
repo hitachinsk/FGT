@@ -17,7 +17,7 @@ class BaseNetwork(nn.Module):
         self.ConvBlock2d = self.ConvBlock
         self.DeconvBlock2d = self.DeconvBlock
 
-    def init_weights(self, init_type='kaiming', gain=0.02):
+    def init_weights(self, init_type='xavier', gain=0.02):
         '''
         initialize network's weights
         init_type: normal | xavier | kaiming | orthogonal
