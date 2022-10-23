@@ -90,7 +90,7 @@ python video_inpainting.py --opt configs/video_extrapolation.yaml \
 </details>
 
 ## Training
-Our codes follows a two-stage training process. In the first stage, we train the flow completion network (LAFC), and then we train the flow-guided transformer model (FGT).
+Our codes follow a two-stage training process. In the first stage, we train the flow completion network (LAFC), and then we train the flow-guided transformer model (FGT).
 We assume you are at the root directory of this repo.
 
 First, please prepare the dataset for training.
