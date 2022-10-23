@@ -2,7 +2,7 @@
 [![OSCS Status](https://www.oscs1024.com/platform/badge//hitachinsk/FGT.git.svg?size=small)](https://www.murphysec.com/dr/Mv2KZkf8cimnLKgoC4)
 [![LICENSE](https://img.shields.io/github/license/hitachinsk/FGT)](https://github.com/hitachinsk/FGT/blob/main/LICENSE)
 
-### [[Paper](https://arxiv.org/abs/2208.06768)] / [[Demo](https://youtu.be/BC32n-NncPs)] / [[Project page](https://hitachinsk.github.io/publication/2022-10-01-Flow-Guided-Transformer-for-Video-Inpainting)] / [[Talk](https://course.zhidx.com/c/NDNlYWQyNmIyZjQwOTdhOWUzODM=)] / [[Poster](https://drive.google.com/file/d/1qhbcl501T3DVDvfSgwSc77qg_4Rwe2oJ/view?usp=sharing)] / [[Intro](https://youtu.be/GGZwkpf7xwo)]
+### [[Paper](https://arxiv.org/abs/2208.06768)] / [[ECVA](https://www.ecva.net/papers/eccv_2022/papers_ECCV/html/1456_ECCV_2022_paper.php)] / [[Demo](https://youtu.be/BC32n-NncPs)] / [[Project page](https://hitachinsk.github.io/publication/2022-10-01-Flow-Guided-Transformer-for-Video-Inpainting)] / [[Talk](https://course.zhidx.com/c/NDNlYWQyNmIyZjQwOTdhOWUzODM=)] / [[Poster](https://drive.google.com/file/d/1qhbcl501T3DVDvfSgwSc77qg_4Rwe2oJ/view?usp=sharing)] / [[Intro](https://youtu.be/GGZwkpf7xwo)]
 
 This repository contains the implementation of the following paper:
 > **Flow-Guided Transformer for Video Inpainting**<br>
