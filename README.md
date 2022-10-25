@@ -130,7 +130,7 @@ If our work inspires your research or some part of the codes are useful for your
 }
 ```
 
-Our other video inpainting paper:
+Our other video inpainting paper ([ISVI](https://github.com/hitachinsk/ISVI)) :
 ```bibtex
 @InProceedings{Zhang_2022_CVPR,
     author    = {Zhang, Kaidong and Fu, Jingjing and Liu, Dong},
