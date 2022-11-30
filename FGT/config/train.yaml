@@ -19,7 +19,7 @@ datasets:
     dataInfo_config: ./config/data_info.yaml
     use_shuffle: True
     n_workers: 0
-    batch_size: 1
+    batch_size: 2
 
   val:
     name: youtubevos
