@@ -133,6 +133,19 @@ If our work inspires your research or some part of the codes are useful for your
 }
 ```
 
+```bibtex
+@misc{https://doi.org/10.48550/arxiv.2301.10048,
+  doi = {10.48550/ARXIV.2301.10048},
+  url = {https://arxiv.org/abs/2301.10048},
+  author = {Zhang, Kaidong and Peng, Jialun and Fu, Jingjing and Liu, Dong},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Exploiting Optical Flow Guidance for Transformer-Based Video Inpainting},
+  publisher = {arXiv},
+  year = {2023},
+  copyright = {arXiv.org perpetual, non-exclusive license}
+}
+```
+
 Our other video inpainting paper ([ISVI](https://github.com/hitachinsk/ISVI)) :
 ```bibtex
 @InProceedings{Zhang_2022_CVPR,
