@@ -26,12 +26,12 @@ class TMHSA(nn.Module):
     def __init__(self, token_size, group_size, d_model, head, p=0.1):
         super(TMHSA, self).__init__()
         self.h, self.w = token_size
-        self.group_size = group_size  # 这里的group size表示可分的组
+        self.group_size = group_size
         self.wh, self.ww = math.ceil(self.h / self.group_size), math.ceil(self.w / self.group_size)
         self.pad_r = (self.ww - self.w % self.ww) % self.ww
         self.pad_b = (self.wh - self.h % self.wh) % self.wh
-        self.new_h, self.new_w = self.h + self.pad_b, self.w + self.pad_r  # 只在右侧和下侧进行padding，另一侧不padding，实现起来更加容易
-        self.window_h, self.window_w = self.new_h // self.group_size, self.new_w // self.group_size  # 这里面的group表示的是窗口大小，而window_size表示的是group大小（与spatial的定义不同）
+        self.new_h, self.new_w = self.h + self.pad_b, self.w + self.pad_r
+        self.window_h, self.window_w = self.new_h // self.group_size, self.new_w // self.group_size
         self.d_model = d_model
         self.p = p
         self.query_embedding = nn.Linear(d_model, d_model)
