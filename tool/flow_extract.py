@@ -148,7 +148,7 @@ def main(args):
             )
 
         video = torch.stack(video, dim=0)
-        video = video.to("cuda")
+        video = video.to(device)
 
         # Calcutes the corrupted flow.
         start = time.time()
