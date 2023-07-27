@@ -2,7 +2,7 @@ cvbase==0.5.5
 imageio==2.6.1
 matplotlib==3.1.1
 numpy==1.22.2
-opencv_python==4.1.1.26
+# opencv_python==4.1.1.26
 Pillow==9.2.0
 PyYAML==6.0
 scikit_image==0.17.2
