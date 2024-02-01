@@ -17,6 +17,7 @@ This repository contains the implementation of the following paper:
  - Colab demo: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19KOSVsfVs2Yy38r-6ptZae_8frJShLOS?usp=sharing)
  
 ## :star: News
+- *2024.02.01:* We have uploaded the [demo]([*2024.01.30:*](https://youtu.be/cKP20WTS2xA?si=LCubeKXlU2gZpMaP)) of FGT++ to Youtube.
 - *2024.01.30:* [FGT++](https://arxiv.org/pdf/2301.10048.pdf) is accepted by TPAMI.
 - *2023.04.24:* FGT is reported by VALSE, a premier forum for Chinese CV researchers, here is the [paper report](https://www.bilibili.com/video/BV17M41157VW/?spm_id_from=333.999.0.0).
 - *2023.01.25:* We release [FGT++](https://arxiv.org/pdf/2301.10048.pdf), which is the journal extension of FGT. In this paper, we reformulate the research motivation and propose more methods to exploit the guidance from completed optical flows to transformer-based video inpainting, including the flow-guided feature propagation module and the newly designed temporal deformable MHSA in temporal transformer block. Besides, we also explore the supervision from frequency domain in video inpainting. FGT++ achieves greatly improved compared with FGT and current existing video inpainting baselines.
